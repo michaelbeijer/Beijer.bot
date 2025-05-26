@@ -5,5 +5,4 @@ At some point I plan to put the code up.
 
 Until then, see: [https://michaelbeijer.co.uk/beijer.bot](https://michaelbeijer.co.uk/beijer.bot).
 
-
-![beijer bot-2025-05-26](https://github.com/user-attachments/assets/72a5c17e-7471-4ee8-a3b8-d961681891b2)
+![beijer bot-2025-05-26_2](https://github.com/user-attachments/assets/773898d6-33b5-4aae-88f0-d89e7144db00)
