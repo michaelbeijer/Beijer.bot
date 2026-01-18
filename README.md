@@ -1,8 +1,6 @@
 # Beijer.bot
 A visual dashboard providing centralised access to various tools I use when translating.
 
-I plan to port the functionality of Beijer.bot to Supervertaler QuickMenu. See: 
-
-Until then, see: [https://michaelbeijer.co.uk/beijer.bot](https://michaelbeijer.co.uk/beijer.bot).
+I plan to port the functionality of Beijer.bot to Supervertaler QuickMenu. See: [supervertaler.com](https://supervertaler.com/)
 
 ![beijer bot-2025-05-26_2](https://github.com/user-attachments/assets/773898d6-33b5-4aae-88f0-d89e7144db00)
