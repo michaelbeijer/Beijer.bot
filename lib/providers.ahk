@@ -153,7 +153,7 @@ PR_AddRow(e, y, cw) {
         PR_Gui.Add("Text", "x+6 y" (y + 4) " w" cw["key"] " cGray",
                    "free, no key needed")
     } else {
-        key := AI_Ini(SettingsFile(), "Keys", id, "")
+        key := SK_Key(id)   ; shared key file first, settings.ini after
         ; Two fields, one masked and one not; the checkbox swaps them.
         row["masked"] := PR_Gui.Add("Edit", "x+6 y" y " w" cw["key"]
                                           . " h22 Password", key)
@@ -364,8 +364,12 @@ PR_Save() {
 
         for id, row in PR_Rows {
             IniWrite(row["on"].Value ? "1" : "0", ini, "QuickTrans", id)
-            if row.Has("masked")
+            if row.Has("masked") {
                 IniWrite(Trim(PR_KeyValue(row)), ini, "Keys", id)
+                ; ... and to the file the Supervertaler plugins read, so a key
+                ; pasted here is a key pasted everywhere.
+                SK_KeySet(id, PR_KeyValue(row))
+            }
             if row.Has("model")
                 IniWrite(Trim(row["model"].Text), ini, "QuickTrans",
                          id "_model")

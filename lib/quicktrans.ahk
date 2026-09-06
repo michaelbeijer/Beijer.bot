@@ -118,7 +118,7 @@ QT_ActiveEngines() {
     for e in QT_Engines() {
         if (QT_Setting(e["id"], QT_EngineDefault(e)) = "0")
             continue
-        if (e["key"] != "" && Trim(AI_Ini(SettingsFile(), "Keys", e["key"], "")) = "")
+        if (e["key"] != "" && SK_Key(e["key"]) = "")
             continue
         ; Ollama and the custom endpoint carry no key, so an empty base URL
         ; is what tells us they were never set up. Without this they would be
@@ -140,8 +140,7 @@ QT_BuildRequest(engine, text, srcCode, tgtCode) {
     ; Engines with no required key can still take an optional one — a custom
     ; endpoint behind a gateway, say — so look one up under the engine's own
     ; name and simply carry on if there is none.
-    key := Trim(AI_Ini(SettingsFile(), "Keys",
-                       engine["key"] != "" ? engine["key"] : id, ""))
+    key := SK_Key(engine["key"] != "" ? engine["key"] : id)
 
     r := Map("method", "POST", "headers", Map(), "body", "")
 

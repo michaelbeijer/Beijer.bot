@@ -152,7 +152,7 @@ AI_Config() {
     if (cfg["model"] = "")
         cfg["model"] := providers[cfg["provider"]]["default_model"]
 
-    cfg["key"] := AI_Ini(ini, "Keys", cfg["provider"], "")
+    cfg["key"] := SK_Key(cfg["provider"])   ; shared key file first, settings.ini after
 
     ; Fall back to the old ChatGptAPI.ini so an existing install keeps working
     ; without the user having to move their key by hand.
@@ -248,7 +248,7 @@ AI_Start(promptText, opts) {
 
     key := cfg["key"]
     if (provider != cfg["provider"])
-        key := AI_Ini(SettingsFile(), "Keys", provider, "")
+        key := SK_Key(provider)
 
     if (key = "") {
         AI_Fail("No API key for " p["label"] ".`n`n"

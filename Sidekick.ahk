@@ -13,6 +13,7 @@ Information:
 
 #SingleInstance
 #Include "lib\jxon.ahk"
+#Include "lib\sharedkeys.ahk"
 #Include "lib\data.ahk"
 #Include "lib\menu_builder.ahk"
 #Include "lib\ai.ahk"
