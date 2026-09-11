@@ -12,7 +12,8 @@ snippet in its place.
 Built in [AutoHotkey v2](https://www.autohotkey.com/docs/v2/). No dependencies,
 no runtime, no install step.
 
-![Supervertaler Sidekick menu](https://github.com/user-attachments/assets/773898d6-33b5-4aae-88f0-d89e7144db00)
+<img width="1280" height="1211" alt="image" src="https://github.com/user-attachments/assets/3d8eef53-3c1c-487e-a4b3-9b12e33cedb2" />
+
 
 ---
 
